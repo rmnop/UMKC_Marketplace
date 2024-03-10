@@ -5,6 +5,8 @@ from django.contrib.auth import login, logout
 
 def main(request):
     return render(request, 'main.html')
+
+
 def register(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
@@ -16,6 +18,7 @@ def register(request):
     else:
         form = UserCreationForm()
     return render(request, 'register.html', {'form': form})
+
 
 def user_login(request):
     if request.method == 'POST':
