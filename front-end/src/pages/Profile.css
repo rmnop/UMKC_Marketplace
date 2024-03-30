@@ -1,0 +1,35 @@
+.data{
+    display: flex;
+    flex-direction: row;
+}
+
+.dataTitle{
+    font-weight: bold;
+    padding-bottom: 5vh;
+    font-size: 2rem;
+}
+
+.dataWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: goldenrod;
+    padding: 5vh;
+    border-radius: 10px;
+    width: 30%;
+    gap: 4vh;
+}
+
+
+.profilePageWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+}
+
+.profilePic{
+    border: 1px solid black;
+    border-radius: 50%;
+}
