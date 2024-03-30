@@ -1,0 +1,21 @@
+.formMods{
+    width: 30%;
+}
+
+.formWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5vh;
+    gap: 5vh;
+    
+}
+
+.formRedirect{
+    display: flex;
+    justify-content: left;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    color: blue;
+}
