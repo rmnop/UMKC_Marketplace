@@ -9,6 +9,7 @@ import './Featured.css'
 const LoggedInFeatured = () => {
   return (
     <>
+    <div className='App'>
     <LoggedInNav /> 
     <div className='pageWrapper'>
     <div className='title'>
@@ -32,6 +33,7 @@ const LoggedInFeatured = () => {
             buttonText="Buy Now"
           />
         </div>
+      </div>
       </div>
       </div>
       </>

@@ -1,0 +1,12 @@
+.App{
+    background: hsla(49, 96%, 50%, 1);
+
+    background: linear-gradient(315deg, hsla(49, 96%, 50%, 1) 0%, hsla(48, 50%, 91%, 1) 100%);
+    
+    background: -moz-linear-gradient(315deg, hsla(49, 96%, 50%, 1) 0%, hsla(48, 50%, 91%, 1) 100%);
+    
+    background: -webkit-linear-gradient(315deg, hsla(49, 96%, 50%, 1) 0%, hsla(48, 50%, 91%, 1) 100%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FACD07", endColorstr="#F3EEDB", GradientType=1 );
+    min-height: 100vh;
+}

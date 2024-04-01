@@ -47,6 +47,7 @@ handleSubmit(e) {
 render(){
   return(
     <>
+    <div className='App'>
     <Navbar />
 <div className='formWrapper'>
 <div className='title'>New Here? Sign Up is Easy.</div>
@@ -72,7 +73,7 @@ render(){
       <button type="submit" className="btn btn-primary">Sign Up</button>
     </form>
 </div>
-   
+   </div>
     </>
   )
 }

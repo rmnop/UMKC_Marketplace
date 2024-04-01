@@ -9,6 +9,7 @@ import './Featured.css'
 const Featured = () => {
   return (
     <>
+    <div className='App'>
     <Navbar />
     <div className='pageWrapper'>
     <div className='title'>
@@ -32,6 +33,7 @@ const Featured = () => {
             buttonText="Buy Now"
           />
         </div>
+      </div>
       </div>
       </div>
       </>

@@ -44,6 +44,7 @@ export default class Login extends Component {
   render(){
   return (
     <>
+    <div className='App'>
     <Navbar />
 <div className='formWrapper'>
 <div className='title'>Welcome Back! Let's Get You Signed In.</div>
@@ -62,7 +63,7 @@ export default class Login extends Component {
       
     </form>
 </div>
-   
+   </div>
     </>
   )
 }

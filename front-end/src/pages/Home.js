@@ -10,7 +10,10 @@ import Shirt3 from '../imgs/DemoShirt3.jpeg';
 const Home = () => {
   return (
     <>
-      <Navbar />
+    <div className='App'>
+    <Navbar />
+    </div>
+      
     
     </>
   );
