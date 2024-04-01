@@ -3,6 +3,7 @@ import './Navbar.css';
 import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faUser} from '@fortawesome/free-solid-svg-icons';
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 
 const LoggedInNav = () => {
@@ -16,6 +17,7 @@ const LoggedInNav = () => {
         <Button variant='primary'><a href='/buy' style={{color: 'white'}}>Buy</a></Button>
         <Button variant='primary'><a href='/sell' style={{color: 'white'}}>Sell</a></Button>
         <a href='/profile'><FontAwesomeIcon icon={faUser} className='fa-xl'/></a>
+        <FontAwesomeIcon icon={faCartShopping} className='fa-xl' style={{color: '#0C6DFD'}}/>
       </div>
    </nav>
   );

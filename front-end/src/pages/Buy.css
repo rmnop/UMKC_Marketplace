@@ -1,0 +1,25 @@
+.video{
+    padding-top: 3vh;
+    width: 90%;
+    height: 100%;
+    z-index: '99999';
+}
+
+.videoWrapper{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3vh;
+    box-shadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px'
+}
+
+.buySection1{
+    margin-top: 7vh;
+    margin-bottom: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    background-color: rgba(64, 112, 243, 0.931);
+}
