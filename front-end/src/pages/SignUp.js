@@ -54,20 +54,20 @@ render(){
 <form className='formMods' onSubmit={this.handleSubmit}>
 <div className="mb-3">
         <label className="form-label">First Name</label>
-        <input type="text" className="form-control" onChange={(e) => this.setState({fname: e.target.value})} />
+        <input type="text" className="form-control signupBox" onChange={(e) => this.setState({fname: e.target.value})} />
       </div>
       <div className="mb-3">
         <label className="form-label">Last Name</label>
-        <input type="text" className="form-control" onChange={(e) => this.setState({lname: e.target.value})} />
+        <input type="text" className="form-control signupBox" onChange={(e) => this.setState({lname: e.target.value})} />
       </div>
       <div className="mb-3">
         <label className="form-label">Email address</label>
-        <input type="email" className="form-control" onChange={(e) => this.setState({email: e.target.value})} />
+        <input type="email" className="form-control signupBox" onChange={(e) => this.setState({email: e.target.value})} />
         <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
       </div>
       <div className="mb-3">
         <label className="form-label">Password</label>
-        <input type="password" className="form-control" onChange={(e) => this.setState({password: e.target.value})} />
+        <input type="password" className="form-control signupBox" onChange={(e) => this.setState({password: e.target.value})} />
       </div>
       <div className='formRedirect'><a href="/login">Already signed up? Click here to login.</a></div>
       <button type="submit" className="btn btn-primary">Sign Up</button>

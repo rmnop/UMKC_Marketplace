@@ -19,3 +19,10 @@
     padding-bottom: 2vh;
     color: blue;
 }
+
+.signupBox{
+    height: 5vh;
+    border-radius: 10px;
+    background-color: #fdf9e7 !important;
+    border: 2px solid #c6b356 !important;
+}

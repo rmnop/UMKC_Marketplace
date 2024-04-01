@@ -51,12 +51,12 @@ export default class Login extends Component {
 <form className='formMods' onSubmit={this.handleSubmit}>
 <div className="mb-3">
   <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-  <input type="email" className="form-control" onChange={(e) => this.setState({ email: e.target.value })} />
+  <input type="email" className="form-control signupBox" onChange={(e) => this.setState({ email: e.target.value })} />
   <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
 </div>
 <div className="mb-3">
   <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-  <input type="password" className="form-control" onChange={(e) => this.setState({ password: e.target.value })} />
+  <input type="password" className="form-control signupBox" onChange={(e) => this.setState({ password: e.target.value })} />
 </div>
 <div className='formRedirect'><a href="/signup">Don't have an account? Click here to sign up.</a></div>
       <button type="submit" className="btn btn-primary">Login</button>
