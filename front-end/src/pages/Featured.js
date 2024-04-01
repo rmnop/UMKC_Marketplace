@@ -21,16 +21,19 @@ const Featured = () => {
             imageUrl={Shirt1}
             title="UMKC Alumni Blue & Gold Week Tee"
             buttonText="Buy Now"
+            href='/login'
           />
           <Card
             imageUrl={Shirt2}
             title="Blue and Gold Week UMKC Alumni Tee"
             buttonText="Buy Now"
+            href='/login'
           />
           <Card
             imageUrl={Shirt3}
             title="Ash Grey UMKC Official Seal Crop Top"
             buttonText="Buy Now"
+            href='/login'
           />
         </div>
       </div>

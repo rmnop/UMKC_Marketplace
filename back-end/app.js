@@ -23,7 +23,7 @@ mongoose.connect(mongoUrl, {
 require("./userDetails");
 require("./listings");
 const User = mongoose.model("UserInfo");
-const Listing = mongoose.model("Listing"); // Define the Listing model
+const Listing = mongoose.model("Listing"); 
 
 app.listen(3000, () => {
     console.log("Server is running on port 3000");
@@ -128,12 +128,6 @@ app.post("/listings", async (req, res) => {
 });
 
 
-// Existing imports and setup...
-
-// Define a new endpoint to handle GET requests for listings
-// Existing imports and setup...
-
-// Define a new endpoint to handle GET requests for listings
 app.get("/listings/buy", async (req, res) => {
     try {
         // Fetch all listings from the database

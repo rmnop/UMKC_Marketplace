@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Card = ({ imageUrl, title, text, buttonText }) => {
+const Card = ({ imageUrl, title, text, buttonText, href }) => {
   return (
     <div className="card" style={{ width: '25rem',   boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px'
   }}>
@@ -8,7 +8,7 @@ const Card = ({ imageUrl, title, text, buttonText }) => {
       <div className="card-body">
         <h5 className="card-title">{title}</h5>
         <p className="card-text">{text}</p>
-        <a href="#" className="btn btn-primary">{buttonText}</a>
+        <a href={href} className="btn btn-primary">{buttonText}</a>
       </div>
     </div>
   )

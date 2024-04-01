@@ -21,16 +21,19 @@ const LoggedInFeatured = () => {
             imageUrl={Shirt1}
             title="UMKC Alumni Blue & Gold Week Tee"
             buttonText="Buy Now"
+            href='#'
           />
           <Card
             imageUrl={Shirt2}
             title="Blue and Gold Week UMKC Alumni Tee"
             buttonText="Buy Now"
+            href='#'
           />
           <Card
             imageUrl={Shirt3}
             title="Ash Grey UMKC Official Seal Crop Top"
             buttonText="Buy Now"
+            href='#'
           />
         </div>
       </div>
