@@ -81,7 +81,7 @@ function AddListing() {
         <div className='userWrapper'>
           <div className='userLeft'>
           <img src={userData?.profilePicture} className='postUserImage'/>
-          <div className='postUserName'>{userData?.fname} {userData?.lname}</div>
+          <div className='postUserName' style={{fontSize: '1rem'}}>{userData?.fname} {userData?.lname}</div>
           </div>
           <div className='userRight'>
           <Button variant="primary" className='postUserButton'>Change User</Button>

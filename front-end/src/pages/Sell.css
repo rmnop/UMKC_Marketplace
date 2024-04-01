@@ -1,3 +1,10 @@
+@font-face {
+    font-family: Saeda;
+    src: url(../fonts/Saeda.otf);
+  }
+.App{
+    font-family: 'Saeda';
+}
 .postUserImage{
     border-radius: 50%;
     width: 20%;
@@ -15,6 +22,7 @@
     padding: 2rem;
     border-radius: 10px;
     background-color: #ffe97b;
+    font-family: 'Saeda';
 }
 
 .userLeft{
