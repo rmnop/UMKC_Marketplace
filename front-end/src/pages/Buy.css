@@ -1,25 +1,33 @@
-.video{
-    padding-top: 3vh;
-    width: 90%;
-    height: 100%;
-    z-index: '99999';
+.video {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Maintain aspect ratio and cover container */
 }
 
-.videoWrapper{
-    width: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 3vh;
-    box-shadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px'
+.videoWrapper {
+    width: 100%; /* Full width */
+    height: 55vh; /* 30% of viewport height */
+    overflow: hidden; /* Hide overflow */
+    position: relative; /* Positioning context for absolutely positioned video */
 }
 
-.buySection1{
-    margin-top: 7vh;
+/* To center the video within the container */
+.videoWrapper video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.buySection1 {
     margin-bottom: 7vh;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 20vh;
     background-color: rgba(64, 112, 243, 0.931);
+}
+
+.break{
+    height: 5vh;
 }

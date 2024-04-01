@@ -31,6 +31,7 @@ const ListingsComponent = () => {
     <>
     <div className='App'>
       <LoggedInNav />
+      <div className='break'></div>
       <div className='videoWrapper'>
       <video src={Video} autoPlay loop muted className="video"></video>
       </div>

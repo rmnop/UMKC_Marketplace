@@ -12,8 +12,8 @@ const LoggedInFeatured = () => {
     <div className='App'>
     <LoggedInNav /> 
     <div className='pageWrapper'>
-    <div className='title'>
-        Featured Items
+    <div className='buySection1' style={{marginTop: '5vh'}}>
+        <div className='title' >Featured Items</div>
     </div>
     <div className='cardContainerWrapper'>
         <div className='cardContainer'>
