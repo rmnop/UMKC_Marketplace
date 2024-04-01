@@ -110,10 +110,13 @@ export default class Profile extends Component {
           <div className='profilePageWrapper'>
             <div className='title'> Welcome, {this.state.userData.fname}!</div>
             <img src={this.state.userData.profilePicture} alt="Profile" className='profilePic' />
-            <div className='data'>
-              <div className='dataLabel'>Profile Picture: </div>
+            <div className='profileData'>
+              <div className='dataLabel'>
+                <div>Profile Picture: </div>
+              <input type="file" onChange={this.handleProfilePictureChange} className='profilepicBox'/>
+              </div>
+              
               <div className='dataInfo'>
-                <input type="file" onChange={this.handleProfilePictureChange} />
                 <Button variant="primary btn-md" onClick={this.handleProfilePictureUpload}>Upload</Button>
               </div>
             </div>

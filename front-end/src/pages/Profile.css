@@ -1,8 +1,22 @@
-.data{
+.profileData{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 2vh;
+    justify-content: center;
+    align-items: center;
 }
-
+.dataInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+.dataLabel{
+    display: flex;
+    flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 1vh;
+}
 .dataTitle{
     font-weight: bold;
     padding-bottom: 5vh;
@@ -20,6 +34,14 @@
     gap: 4vh;
 }
 
+.profilepicBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56%;
+    overflow: visible;
+}
+
 
 .profilePageWrapper{
     display: flex;
@@ -32,4 +54,8 @@
 .profilePic{
     border: 1px solid black;
     border-radius: 50%;
+}
+
+.data{
+    display: flex;
 }
