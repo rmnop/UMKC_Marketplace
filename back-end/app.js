@@ -21,7 +21,9 @@ mongoose.connect(mongoUrl, {
 });
 
 require("./userDetails");
+require("./listings");
 const User = mongoose.model("UserInfo");
+const Listing = mongoose.model("Listing"); // Define the Listing model
 
 app.listen(3000, () => {
     console.log("Server is running on port 3000");
@@ -77,4 +79,72 @@ app.post("/userData", async(req, res) => {
     catch(error){
         
     }
+});
+app.get("/api", (req, res) => {
+    res.send("Hello World");
 })
+
+app.post("/listings", async (req, res) => {
+    const { title, description, price, images } = req.body;
+
+    try {
+        // Retrieve the token from the request headers
+        const token = req.headers.authorization.split(' ')[1];
+        
+        // Verify the JWT token
+        const decoded = jwt.verify(token, JWT_SECRET);
+        
+        // Extract the user's email from the decoded token
+        const userEmail = decoded.email;
+        
+        // Find the user based on the email retrieved from the token
+        const user = await User.findOne({ email: userEmail });
+
+        // If the user doesn't exist, return an error response
+        if (!user) {
+            return res.status(404).json({ error: "User not found" });
+        }
+
+        // Create a new listing associated with the user
+        const newListing = new Listing({
+            title,
+            description,
+            price,
+            images,
+            postedBy: user._id,
+        });
+
+        // Save the new listing to the database
+        await newListing.save();
+
+        // Respond with success status and the new listing data
+        res.status(201).json({ status: "OK", data: newListing });
+    } catch (error) {
+        // If there's an error during token verification or listing creation,
+        // log the error to the console and respond with an error message
+        console.error("Error creating listing:", error);
+        res.status(500).json({ error: "Internal server error", details: error.message });
+    }
+});
+
+
+// Existing imports and setup...
+
+// Define a new endpoint to handle GET requests for listings
+// Existing imports and setup...
+
+// Define a new endpoint to handle GET requests for listings
+app.get("/listings/buy", async (req, res) => {
+    try {
+        // Fetch all listings from the database
+        const listings = await Listing.find();
+        
+        // Respond with the listings data
+        res.status(200).json({ status: "OK", data: listings });
+    } catch (error) {
+        // If there's an error during fetching listings,
+        // log the error to the console and respond with an error message
+        console.error("Error fetching listings:", error);
+        res.status(500).json({ error: "Internal server error", details: error.message });
+    }
+});
