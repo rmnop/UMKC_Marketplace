@@ -45,6 +45,7 @@ componentDidMount() {
 
   return (
     <>
+    <div className='App'>
     <LoggedInNav />
     <div className='profilePageWrapper'>
     <div className='title'> Welcome, {this.state.userData.fname}!</div>
@@ -68,6 +69,7 @@ componentDidMount() {
 
 
 
+    </div>
     </div>
     </div>
     </>

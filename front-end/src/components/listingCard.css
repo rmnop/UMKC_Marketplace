@@ -1,0 +1,51 @@
+.listingCardWrapper{
+    display: flex;
+    background: hsla(240, 2%, 8%, 1);
+
+background: linear-gradient(270deg, hsla(240, 2%, 8%, 1) 0%, hsla(330, 2%, 32%, 1) 99%);
+
+background: -moz-linear-gradient(270deg, hsla(240, 2%, 8%, 1) 0%, hsla(330, 2%, 32%, 1) 99%);
+
+background: -webkit-linear-gradient(270deg, hsla(240, 2%, 8%, 1) 0%, hsla(330, 2%, 32%, 1) 99%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#151516", endColorstr="#534F51", GradientType=1 );
+width: 20vw;
+height: 40vh;
+justify-content: center;
+border-radius: 20%;
+
+}
+
+.listingContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20vh;
+    justify-content: center;
+    height: auto;
+
+    
+}
+
+.listingImage{
+    max-height: 60%;
+    background-color: #f0f0f0;
+    border-radius: 20%;
+}
+
+.listingTitle{
+    font-size: 1.5em;
+    color: white;
+}
+
+.listingPrice{
+    font-size: 1.5em;
+    color: white;
+}
+
+.listingInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 50%;
+}

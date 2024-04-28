@@ -47,6 +47,7 @@ handleSubmit(e) {
 render(){
   return(
     <>
+    <div className='App'>
     <Navbar />
 <div className='wrapper'>
 <div className='form-box register'>
@@ -72,9 +73,8 @@ render(){
       </form>
     </div>
     </div>
+    </div>
     </>
   )
 }
 }
-
-

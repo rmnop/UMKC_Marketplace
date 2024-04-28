@@ -1,5 +1,6 @@
 import React from 'react';
 import './Navbar.css';
+import Button from 'react-bootstrap/Button';
 
 const Navbar = () => {
   return (
@@ -10,8 +11,8 @@ const Navbar = () => {
         <a href='/featured'>Featured</a>
       </div>
       <div className='navbarRight'>
-        <a href='/signup'>Sign Up</a>
-        <a href='/login'>Login</a>
+        <Button variant="primary btn-md"><a href='/signup' style={{color: 'white'}}>Sign Up</a></Button>
+        <Button variant="primary btn-md"><a href='/login' style={{color: 'white'}}>Login</a></Button>
       </div>
    </nav>
   );

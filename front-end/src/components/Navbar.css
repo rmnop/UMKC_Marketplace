@@ -19,10 +19,15 @@
   justify-content: space-between;
   gap: 2rem;
   padding-right: 3rem;
-  padding-top: 2rem;
+  padding-top: 1rem;
   align-items: center;
 }
 
 a{
   text-decoration: none !important;
+}
+
+.navbar{
+  background-color: transparent;
+  align-items: center;
 }
