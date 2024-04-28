@@ -1,11 +1,13 @@
 import React, {Component} from 'react'
 import LoggedInNav from '../components/LoggedInNav';
 import './Profile.css'
+import ImageUpload from './ImageUpload';
 export default class Profile extends Component  {
 constructor(props){
     super(props);
     this.state={
         userData: "",
+        ImageUpload: "",
         profilePicture: "https://static.vecteezy.com/system/resources/thumbnails/020/765/399/small/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg" // Default profile picture path
     };
 }
@@ -40,6 +42,7 @@ componentDidMount() {
 
 
     render(){
+
   return (
     <>
     <LoggedInNav />
@@ -47,10 +50,8 @@ componentDidMount() {
     <div className='title'> Welcome, {this.state.userData.fname}!</div>
     <img src={this.state.userData.profilePicture} alt="Profile" className='profilePic'/>
     <div className='data'>
-            <div className='dataLabel'>Profile Picture: </div>
             <div className='dataInfo'>
-                <input type="file" onChange={this.handleProfilePictureChange} />
-                <button onClick={this.handleProfilePictureUpload}>Upload</button>
+                <ImageUpload />
             </div>
         </div>
     <div className='dataWrapper'>
@@ -58,11 +59,6 @@ componentDidMount() {
     <div className='data'>
       <div className='dataLabel'>First Name: </div>
       <div className='dataInfo'> {this.state.userData.fname}</div>
-    </div>
-
-    <div className='data'>
-      <div className='dataLabel'>Last Name: </div>
-      <div className='dataInfo'> {this.state.userData.lname}</div>
     </div>
 
     <div className='data'>
@@ -76,6 +72,7 @@ componentDidMount() {
     </div>
     </>
   );
+ }
 }
-}
+
 

@@ -6,6 +6,7 @@ const LoggedInNav = () => {
    <nav className='navbar'>
       <div className='navbarLeft'>
         <div className='navbarLogo'>UMKC Marketplace</div>
+        <a href='/'>Home</a>
         <a href='/loggedinfeatured'>Featured</a>
       </div>
       <div className='navbarRight'>

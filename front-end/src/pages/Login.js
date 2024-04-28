@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Navbar from '../components/Navbar'
+import '../pages/login.css'
 export default class Login extends Component {
   constructor(props){
     super(props);
@@ -30,9 +31,10 @@ export default class Login extends Component {
     .then((res) => res.json())
     .then((data) => {
       console.log(data, "userRegister");
-      if(data.status=="OK"){
+      if(data.status==="OK"){
         alert("login successful");
         window.localStorage.setItem("token", data.data);
+        window.localStorage.setItem("loggedIn", true);
         window.location.href="/profile";
       }
     })
@@ -43,27 +45,37 @@ export default class Login extends Component {
   }
   render(){
   return (
+
+    
     <>
+
     <Navbar />
-<div className='formWrapper'>
-<div className='title'>Welcome Back! Let's Get You Signed In.</div>
-<form className='formMods' onSubmit={this.handleSubmit}>
-<div className="mb-3">
-  <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-  <input type="email" className="form-control" onChange={(e) => this.setState({ email: e.target.value })} />
-  <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
-</div>
-<div className="mb-3">
-  <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-  <input type="password" className="form-control" onChange={(e) => this.setState({ password: e.target.value })} />
-</div>
-<div className='formRedirect'><a href="/signup">Don't have an account? Click here to sign up.</a></div>
-      <button type="submit" className="btn btn-primary">Login</button>
-      
-    </form>
-</div>
-   
+  <div className='wrapper'>
+    <div className='form-box login'>
+      <form action='' onSubmit={this.handleSubmit}>
+        <h1>Login</h1>
+        <div className='input-box'>
+          <input type='email' placeholder='Email' onChange={(e) => this.setState({email: e.target.value})} required />
+          {/*<FaUser className='icon' />*/}
+          </div>
+          <div className='input-box'>
+          <input type='password' placeholder='Password' onChange={(e) => this.setState({ password: e.target.value })} required />
+          {/*<FaUser className='icon' />*/}          
+          </div>
+          <div className='remember-forgot'>
+          <label><input type='checkbox'  />Remember me</label>
+          <a href='/reset'>Forgot Password?</a>
+          </div>
+          <button type='submit'>Login</button>
+
+          <div className='register-link'>
+            <p>Don't have an account? <a href='/signup'>Register</a></p>
+          </div>
+      </form>
+    </div>
+  </div>
     </>
   )
 }
+
 }

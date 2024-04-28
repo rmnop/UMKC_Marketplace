@@ -13,7 +13,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: goldenrod;
+    background-color: var(--umkc-blue);
+    color: #fff;
     padding: 5vh;
     border-radius: 10px;
     width: 30%;
